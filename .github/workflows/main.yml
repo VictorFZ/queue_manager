@@ -73,6 +73,6 @@ jobs:
       run: |
         dotnet --version
         dotnet nuget push "output/*.nupkg" \
-          --source ${{ env.NUGET_SOURCE }} \
+          --source ${{ env.PRIVATE_NUGET_REPOSITORY_URL }} \
           --api-key ${{ secrets.GITHUB_TOKEN }} \
           --skip-duplicate --no-symbols
